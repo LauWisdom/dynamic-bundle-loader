@@ -1,0 +1,19 @@
+{
+  "name": "dynamic-bundle-loader",
+  "version": "1.0.0",
+  "description": "a dynamic import bundle loader",
+  "main": "dynamic-bundle-loader.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LauWisdom/dynamic-bundle-loader.git"
+  },
+  "author": "LauWisdom",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LauWisdom/dynamic-bundle-loader/issues"
+  },
+  "homepage": "https://github.com/LauWisdom/dynamic-bundle-loader#readme",
+  "dependencies": {
+    "loader-utils": "^1.2.3"
+  }
+}

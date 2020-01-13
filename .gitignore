@@ -1,0 +1,4 @@
+node_modules
+example/vue-bundle/node_modules
+example/react-bundle/node_modules
+.idea
