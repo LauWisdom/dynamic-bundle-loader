@@ -15,7 +15,7 @@ module.exports = {
 
     resolveLoader: {
         alias: {
-            LazyLoader: './loader/dynamic-bundle-loader'
+            LazyLoader: 'dynamic-bundle-loader'
         }
     },
 

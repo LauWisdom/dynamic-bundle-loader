@@ -15,7 +15,7 @@ module.exports = {
 
     resolveLoader: {
         alias: {
-            LazyLoader: path.resolve((__dirname, './loader/dynamic-bundle-loader'))
+            LazyLoader: 'dynamic-bundle-loader'
         }
     },
 
@@ -40,7 +40,7 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-            title: 'react bundle',
+            title: 'vue bundle',
             template: path.resolve((__dirname, 'public/index.html')),
             filename: path.resolve((__dirname, 'dist/index.html')),
             chunks: ['index']

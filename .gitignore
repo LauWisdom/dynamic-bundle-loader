@@ -1,4 +1,6 @@
 node_modules
 example/vue-bundle/node_modules
+example/vue-bundle/dist
 example/react-bundle/node_modules
+example/react-bundle/dist
 .idea
