@@ -1,4 +1,4 @@
-The original purpose of writing this loader is mainly to reduce the size of the first screen js, so that some components are only loaded when they are needed, such as clicking a button to pop up a modal box. The code of the modal box will not be loaded before clicking, but only be loaded after clicking. At the same time, you need to make the lazy-loaded component use as similar to the original use as possible. Therefore, i recommend using **dynamic-bundle-loader** to do this thing.
+The original purpose of writing this loader is mainly to reduce the size of the first screen js, so that some components are only loaded when they are needed, such as clicking a button to pop up a modal box. The code of the modal box will not be loaded before clicking, but only be loaded after clicking. At the same time, you need to make the lazy-loaded component use as similar to the original use as possible. Therefore, **i recommend using dynamic-bundle-loader to do this thing.**
 
 The following briefly shows how to use **dynamic-bundle-loader** in react and vue to lazily load component. What's more, the components that need to be lazy loaded are used as much as possible as the original components (but the related use of react hook is not provided for the time being, interested parties can refer to the following code to rewrite into the react hook version ). The code can be found in the "example" folder. Obviously, the function of the code may be incomplete.I just borrow and provide an simple idea.
 
@@ -121,7 +121,7 @@ ReactDOM.render(<App />, document.getElementById('root'))
 
 ```
 
-It can be seen from the above code that if you need to lazy load the component (called LazyComponent in the code), you only need to pass the lazy-loaded component into **LazyLoader **as its props. Of course, the lazy-loaded components must be parsed by **dynamic-bundle-loader.** In the above code, we can see how to import lazy-loaded components in the code.
+It can be seen from the above code that if you need to lazy load the component (called LazyComponent in the code), you only need to pass the lazy-loaded component into **LazyLoader** as its props. Of course, the lazy-loaded components must be parsed by **dynamic-bundle-loader.** In the above code, we can see how to import lazy-loaded components in the code.
 
 ```javascript
 import LazyComponent from 'LazyLoader!./src/LazyComponent.js'
@@ -139,7 +139,7 @@ module.exports = {
 }
 ```
 
-Why do we need to import component like this and use such a webpack configuration? The reason is that not every component needs to be loaded lazily. In this way, we can only perform dynamic-bundle-loader parsing for components that need to be \loaded lazily.
+Why do we need to import component like this and use such a webpack configuration? The reason is that not every component needs to be loaded lazily. In this way, we can only perform dynamic-bundle-loader parsing for components that need to be loaded lazily.
 
 ### 2、Vue
 
