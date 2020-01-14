@@ -1,14 +1,17 @@
 {
   "name": "dynamic-bundle-loader",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "dynamic import bundle and should be used for creating lazy-loaded component",
   "main": "dynamic-bundle-loader.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LauWisdom/dynamic-bundle-loader.git"
   },
-
-  "keywords": ["dynamic import", "lazy loaded", "lazy bundle"],
+  "keywords": [
+    "dynamic import",
+    "lazy loaded",
+    "lazy bundle"
+  ],
   "author": "LauWisdom",
   "license": "ISC",
   "bugs": {
