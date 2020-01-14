@@ -1,7 +1,7 @@
 <template>
     <div>
         <button @click="handleClick">展示lazyLoader</button>
-        <LazyLoader v-if="isShowLazyLoader" :component="LazyComponent" :props="{aa: 1}"></LazyLoader>
+        <LazyLoader v-if="isShowLazyLoader" :component="LazyComponent" :props="{count}" @myclick="emitMyClick"></LazyLoader>
     </div>
 </template>
 
@@ -14,7 +14,8 @@
         data() {
             return {
                 LazyComponent,
-                isShowLazyLoader: false
+                isShowLazyLoader: false,
+                count: 0
             }
         },
 
@@ -25,7 +26,12 @@
 
         methods: {
             handleClick() {
+                this.count++
                 this.isShowLazyLoader = !this.isShowLazyLoader
+            },
+
+            emitMyClick() {
+                console.log('emit my click success!!!')
             }
         }
     }

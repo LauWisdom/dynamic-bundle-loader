@@ -1,7 +1,8 @@
 <template>
     <div>
         this is a lazy Component!!!
-        <div>{{aa}}</div>
+        <div>{{count}}</div>
+        <button @click="$emit('myclick')">emit click!!!</button>
     </div>
 </template>
 
@@ -10,8 +11,9 @@
         name: "lazyComponent",
 
         props: {
-            aa: {
-                type: Number
+            count: {
+                type: Number,
+                default: 0
             }
         }
     }

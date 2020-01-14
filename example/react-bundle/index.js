@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
 
-import LazyComponentBundle from 'LazyLoader!./src/lazyComponent.bundle.js';
-import LazyLoader from './src/lazyloader';
+import LazyComponent from 'LazyLoader!./src/LazyComponent.js'
+import LazyLoader from './src/lazyloader'
 
 
 class App extends Component {
@@ -26,14 +26,14 @@ class App extends Component {
         const {isShowLazyLoader} = this.state
         return (
             <div>
-                <button onClick={this.handleClick}>展示lazyLoader</button>
+                <button onClick={this.handleClick}>show lazyLoader</button>
                 {
-                    isShowLazyLoader && <LazyLoader component={LazyComponentBundle}/>
+                    isShowLazyLoader && <LazyLoader component={LazyComponent}/>
                 }
             </div>
         );
     }
 }
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'))
 

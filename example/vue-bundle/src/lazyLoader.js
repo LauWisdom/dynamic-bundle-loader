@@ -60,7 +60,9 @@ export default {
             return createElement(
                 LazyComponent,
                 {
-                    props: {...this.finalProps}
+                    props: {...this.finalProps},
+                    attrs: this.$attrs,
+                    on: this.$listeners
                 }
             )
         } else {

@@ -1,32 +1,32 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 class LazyLoader extends Component {
     constructor(props) {
-        super(props);
+        super(props)
         this.state = {
             component: null,
-            props: null,
-        };
-        this._isMounted = false;  // 这个需要考虑
+            props: null
+        }
+        this._isMounted = false
     }
 
     componentWillMount() {
-        this._load();
+        this._load()
     }
 
     componentDidMount() {
-        this._isMounted = true;
+        this._isMounted = true
     }
 
     componentWillReceiveProps(next) {
         if (next.component === this.props.component) {
-            return null;
+            return null
         }
-        this._load();
+        this._load()
     }
 
     componentWillUnmount() {
-        this._isMounted = false;
+        this._isMounted = false
     }
 
     async _load() {
@@ -38,13 +38,13 @@ class LazyLoader extends Component {
     }
 
     render() {
-        const LazyComponent = this.state.component;
-        const props = Object.assign({}, this.props);    // clone props
-        delete props.component;                         // 去掉 component
+        const LazyComponent = this.state.component
+        const props = Object.assign({}, this.props)
+        delete props.component
         return LazyComponent ? (
             <LazyComponent {...props}/>
-        ) : null;
+        ) : null
     }
 }
 
-export default LazyLoader;
+export default LazyLoader
